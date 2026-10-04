@@ -1,6 +1,13 @@
 ## FIRMWARE OVAM --- THE BEST 
 > A Simple and Beautiful Firmware 
 
+# OVAM (Open Vallen Ard Man) - The Beautiful Firmware
+
+![License](https://shields.io/License/--BSD-2-Clause/blue)
+![Security](https://shields.io/Security/--AEMos-Protected/red)
+![Status](https://shields.io/Status/Programming/orange)
+![Architecture](https://shields.io/Architecture/x86__64--Freestanding/black)
+
 ### LICENSE HEADER
 * **BCD=2: Capsule of Two Patent**
 * **Copyright (C) 2026 QMX Corporation**
