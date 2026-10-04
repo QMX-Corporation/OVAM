@@ -41,13 +41,18 @@
 ### SIGNER 
 * **In Windows: Signtool (signtool.exe) in Windows SDKs**
 * **In Unix, Linux, Android or MacOS: The App Signer Supported. e.g: OpenSSL/OpenSSH**
+* **RFC 3161 Modern**
 
 ---
 
 ### FOLDER STRUCTURES 
 ```text
 OVAM 
-  |
+  | Compile  # The Build Folder
+       | Unix, Linux, Android and MacOS  # The OS
+             | build.sh  # Script for Compile the Project
+       | Windows # The OS
+           | build.bat  # Script for Compile the Project
   | ManagerPkg # The Manager Package
        | AEMos  # Crypto System
            | aemos.c # Crypto System
@@ -58,6 +63,9 @@ OVAM
 | LICENSE  # BSD-2 License
 | README.md  # The README
 ```
+* **WARNING:**
+* **In build.sh, please modify the App Signer for App Signer Installed**
+* **But, not commit your alteration in build.sh**
 
 ---
 
