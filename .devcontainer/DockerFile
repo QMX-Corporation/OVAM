@@ -1,0 +1,9 @@
+FROM ://microsoft.com
+
+RUN apt-get update && apt-get install -y \
+    clang \
+    lld \
+    nasm \
+    make \
+    git \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*

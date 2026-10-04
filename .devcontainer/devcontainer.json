@@ -1,0 +1,16 @@
+{
+    "name": "OVAM - Open Vallen Ard Man Development Env",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "sigasi.sigasi-vscode"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}
