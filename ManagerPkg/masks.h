@@ -20,7 +20,7 @@
     uint32_t segm_code; // The Code of Segment, the Ring 0 (the Firmware and Bootloader) no masked 
     uint32_t CODE; // The Code of Next Data (used for imprevisible masks)
     uint32_t DATA; // The Data have 2 Bits: the Bit 0 is the Destinatary (the Masked), and the Bit 1 is the Rementent (the Masker)
-    uint8_t Signature[5]; // "AEMos"
+    uint32_t Signature[5]; // "AEMos"
  } __attribute__((packed, aligned(4096))) MASK_DATA_INSTR;
 
  #endif

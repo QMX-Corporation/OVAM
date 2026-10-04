@@ -7,7 +7,7 @@ set LLD=ld.lld
 set NASM=nasm
 
 REM Flags
-set LDFLAGS=-T linker.ld --flto-O3 
+set LDFLAGS=-T linker.ld --flto -O3 
 set NASMFLAGS=-f bin
 set CXXFLAGS=--target=x86_64 -ffreestanding -nostdlib -O3 -flto -fno-builtin -fno-rtti -fno-stack-protector -mno-sse -mno-sse2 -mno-red-zone
 

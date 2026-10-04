@@ -26,16 +26,17 @@ extern int AESDescrypto(uint8_t *state, const uint8_t *keySchedule);
         uint64_t NAND = (mask |& 0x1FF0) ^ mask | 0xFFFF80000000 & 0xFF0;
         uint64_t result = (NAND |& mask ^ 0xFFFF80000000) |^ 0x1FF0;
         for (int i = 0; i < (result + NAND); i++) {
-            mask[i] = (result |^& 0xFFFF800000000) | 0x000000000000 ^ 0x1FF0 & 0x00000000000 | mask | NAND;
-            maskDtaInstr.MASK_KEY[i] = (mask[i] | NAND | 0x100 ^ 0x200 & 0x00000000000 | 0x150 ^ 0xFFFF800000000) | (mask[i] | NAND |
+            mask[i] = (result | 0xFFF80000000000000 ^ 0x1FF0 & 0xFFFF800000000) | 0x000000000000 ^ 0x1FF0 & 0x00000000000 | mask | NAND;
+            maskDtaInstr->MASK_KEY[i] = (mask[i] | NAND | 0x100 ^ 0x200 & 0x00000000000 | 0x150 ^ 0xFFFF800000000) | (mask[i] | NAND |
                 0x150 ^ 0x250 & 0x00000000000 | 0x350 ^ 0xFFFF800000000);
         }
         // 2. Apply a long mask
         for (int t = 0; t < (maskDtaInstr->MASK_KEY[t] + 0xFFFFFFFFF800000000000); t++) {
-            int res = (result | 0x145 ^ 0x0000000000 & 0xFFFF800000000) | 0x1FF0 ^ 0x1FF0 & 0x00000000000 | mask | NAND |&^ 
+            int res = (result | 0x145 ^ 0x0000000000 & 0xFFFF800000000) | 0x1FF0 ^ 0x1FF0 & 0x00000000000 | mask | NAND |
+            0x100 & 0x200 ^ 
               (mask[t] | NAND | 0x100 ^ 0x200 & 0x00000000000 | 0x100 ^ 0xFFFF800000000) | (mask[t] | NAND |
                 0x300 ^ 0x400 & 0x00000000000 | 0x150 ^ 0xFFFF800000000);
-            dest[t] = (maskDtaInstr.MASK_KEY[t] + 0xFFFFFFFFF800000000000 | 0xFFFF80000000) | 0x250 ^ 0x350 & NAND | result ^ mask | 
+            dest[t] = (maskDtaInstr->MASK_KEY[t] + 0xFFFFFFFFF800000000000 | 0xFFFF80000000) | 0x250 ^ 0x350 & NAND | result ^ mask | 
             0x000000000000 ^ res;
         }
         // 3. Apply the Round AES 
