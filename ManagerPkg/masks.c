@@ -23,8 +23,8 @@ extern int AESDescrypto(uint8_t *state, const uint8_t *keySchedule);
     // No? Continue the Logic 
     else {
         // 1. Define the MASK_KEY Value 
-        uint64_t NAND = (mask |& 0x1FF0) ^ mask | 0xFFFF80000000 & 0xFF0;
-        uint64_t result = (NAND |& mask ^ 0xFFFF80000000) |^ 0x1FF0;
+        uint64_t NAND = (mask | 0x1FF0 & 0x1FF0) ^ mask | 0xFFFF80000000 & 0xFF0;
+        uint64_t result = (NAND | NAND & mask ^ 0xFFFF80000000) | 0xFF0 ^ 0x1FF0;
         for (int i = 0; i < (result + NAND); i++) {
             mask[i] = (result | 0xFFF80000000000000 ^ 0x1FF0 & 0xFFFF800000000) | 0x000000000000 ^ 0x1FF0 & 0x00000000000 | mask | NAND;
             maskDtaInstr->MASK_KEY[i] = (mask[i] | NAND | 0x100 ^ 0x200 & 0x00000000000 | 0x150 ^ 0xFFFF800000000) | (mask[i] | NAND |
