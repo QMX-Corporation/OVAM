@@ -27,7 +27,7 @@ The following developers hold original intellectual property rights over the Ope
 
 ### MY REQUISITES
 - User GitHub: <your-name>
-- Contribution Years: 5 Years (Minimum for pass under Member -> Collaborator)
+- Contribution Years (with Project): 5 Years (Minimum for pass under Member -> Collaborator)
 - PR Approved: 15 (Minimum for pass under Member -> Collaborator)
 - Perfect Issues: 15 (Minimum for pass under Member -> Collaborator)
 
