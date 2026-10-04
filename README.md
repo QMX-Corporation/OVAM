@@ -60,6 +60,8 @@ OVAM
     | manager.c  # The Manager
     | masks.c  # Masks Logic
     | masks.h  # Masks Header
+| .gitattributes  # Essential Git File (EGF)
+| .gitignore  # Essential Git File (EGF)
 | LICENSE  # BSD-2 License
 | README.md  # The README
 ```
