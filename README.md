@@ -5,7 +5,7 @@
 
 ![License](https://shields.io/badge/-License--BSD-2-Clause-blue)
 ![Security](https://shields.io/badge/-Security--AEMos-Protected-red)
-![Status](https://shields.io/badge-Status-Programming-orange)
+![Status](https://shields.io/badge/-Status-Programming-orange)
 ![Architecture](https://shields.io/badge/-Architecture-x86__64--Freestanding-black)
 
 ### LICENSE HEADER
