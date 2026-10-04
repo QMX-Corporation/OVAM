@@ -8,6 +8,14 @@
 ![Status](https://shields.io/badge/Status-Programming-orange)
 ![Architecture](https://shields.io/badge/Architecture-x86__64--Freestanding-black)
 
+## Navigation
+- [LICENSE HEADER](#license-header)
+- [RULES](#rules)
+- [FUTURE IMPLEMENTATIONS](#futures-implementations)
+- [FOLDER STRUCTURES](#folder-structures)
+
+---
+
 ### LICENSE HEADER
 * **BCD=2: Capsule of Two Patent**
 * **Copyright (C) 2026 QMX Corporation**
@@ -23,8 +31,19 @@
 
 ---
 
+## 🛠️ System Toolchain
+
+| Technology | Component | Status |
+| :--- | :--- | :--- |
+| 🖥️ **Assembly** | NASM (Netwide Assembler) | `Integrated` |
+| 🦾 **C / C++** | Clang v19.x Engine | `Active` |
+| 🔗 **Linker** | LLVM `ld.lld` Utilities | `Optimized` |
+| 🛡️ **Security** | AEMos Polymorphic Core | `Locked` |
+
+---
+
 ## IMPLEMT
-### FUTURES IMPLEMENTATIONS 
+### FUTURE IMPLEMENTATIONS 
 * **ACPI Tables: ALL ACPI Tables existents**
 * **Customized Format: PXE, the Bootloader is mandatory with extension-file .pxe**
 * **Secure Boot: With ManagerPkg**
