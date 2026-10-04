@@ -27,6 +27,23 @@
 
 ---
 
+## PRE-REQUISITES
+### WHAT I USES FOR COMPILE THE OVAM?
+* **Clang, OPTIONAL: Compiler MSCV (Visual Studio)**
+* **Linker: LLVM**
+* **Operating System: Windows, Unix, Linux, MacOS or Android**
+* **Caller: Make**
+* **WARNING: The Flow is: Make -> build.bat/build.sh -> Compiler -> Linker -> App Signer -> File .bin**
+
+---
+
+## SIGNATURE
+### SIGNER 
+* **In Windows: Signtool (signtool.exe) in Windows SDKs**
+* **In Unix, Linux, Android or MacOS: The App Signer Supported. e.g: OpenSSL/OpenSSH**
+
+---
+
 ### FOLDER STRUCTURES 
 ```text
 OVAM 
