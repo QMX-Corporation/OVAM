@@ -10,6 +10,9 @@ All notable changes to the OVAM ecosystem will be documented in this file under 
 - Strategic repository deployment schemas (`GOVERNANCE.md` and `ROADMAP.md`) for corporate project alignment.
 - Low-level automated isolated sandbox environment definitions utilizing container backend clusters (`.devcontainer`).
 - Native x86_64 entrypoint initialization routine (`MainPkg/boot.asm`) enforcing 16-byte aligned stack frame controls and NOP Static Flags (NSF) memory structures.
+- Stablish Scripts Multiplatform.
+- Add linker.ld
+- Add Section reset in boot.asm (in linker.ld, is .reset_vector include *.reset) for Reset Vector.
 
 ### Changed
 - Consolidated `ManagerPkg` and `AEMos` (34+ Extreme Cryptographic Rounds) into the independent core tree.

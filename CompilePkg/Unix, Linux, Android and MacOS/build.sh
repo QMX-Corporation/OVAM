@@ -14,6 +14,9 @@ NASM="nasm"
 NASMFLAGS="-f bin"
 
 # --- FOLDERS ---
+# MainPkg
+MainPkgASM=../MainPkg/*.asm
+
 # ManagerPkg
 ManagerPkgASM=../ManagerPkg/*.asm 
 ManagerPkgClang=../ManagerPkg/*.c
@@ -26,6 +29,9 @@ ManagerPkgSubFolderClang=../ManagerPkg/*/*.c
 cd ../../
 mkdir Build
 cd Build
+
+# 1.5. Compile the Entrypoint Assembly Files
+$NASM $NASMFLAGS $MainPkgASM -o boot.o
 
 # 2. Compile the Files .c
 $CXX $CXXFLAGS -c $ManagerPkgClang -o firmware.o

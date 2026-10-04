@@ -12,6 +12,9 @@ set NASMFLAGS=-f bin
 set CXXFLAGS=--target=x86_64 -ffreestanding -nostdlib -O3 -flto -fno-builtin -fno-rtti -fno-stack-protector -mno-sse -mno-sse2 -mno-red-zone
 
 REM --- FOLDERS ---
+REM MainPkg
+set MainPkgASM=..\MainPkg\*.asm
+
 REM ManagerPkg
 set ManagerPkgASM=..\ManagerPkg\*.asm 
 set ManagerPkgClang=..\ManagerPkg\*.c
@@ -26,6 +29,9 @@ cd ..\..\
 mkdir Build
 cd Build
 
+REM Compile the Entrypoint Assembly Files
+%NASM% %NASMFLAGS% %MainPkgASM% -o boot.o
+
 REM Compile the Files .c
 %CXX% %CXXFLAGS% -c %ManagerPkgClang% -o firmware.o
 %CXX% %CXXFLAGS% -c %ManagerPkgSubFolderClang% -o firmware_sub.o
@@ -34,7 +40,7 @@ REM Link all Files .o
 %LLD% *.o %LDFLAGS% -o ovam.bin
 
 REM Using App Signer for Sign the Binary
-signtool sign /n "QMX Corporation" /fd SHA256 /tr http://timestamp.digicert.com /td SHA256 ovam.bin
+signtool sign /n "QMX Corporation" /fd SHA256 /tr http://digicert.com /td SHA256 ovam.bin
 
 REM Remove all files .o
 rm -rf *.o

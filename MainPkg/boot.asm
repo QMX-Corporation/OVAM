@@ -34,3 +34,7 @@ section .bss
       nop: dd 0
       static: dd 0
       flags: dd 0
+
+; Section reset 
+section reset
+      jmp .boot_main
