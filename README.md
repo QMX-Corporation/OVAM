@@ -48,6 +48,11 @@
 ### FOLDER STRUCTURES 
 ```text
 OVAM 
+  | .github  # The MainPath of GitHub
+       | ISSUE_TEMPLATE 
+             | bug_report.md  # Update the Issues of Bugs
+             | feature_request.md  # A Request of Features
+        | pull_request_template.md  # The "God" of PRs
   | Compile  # The Build Folder
        | Unix, Linux, Android and MacOS  # The OS
              | build.sh  # Script for Compile the Project
@@ -62,8 +67,15 @@ OVAM
     | masks.h  # Masks Header
 | .gitattributes  # Essential Git File (EGF)
 | .gitignore  # Essential Git File (EGF)
+| CHANGELOG.md  # The Logs of Changes
+| CONTRIBUTING.md  # With I collaborating with OVAM Project?
+| CONTRIBUTORS.md  # The Contributors
+| GOVERNANCE.md  # BDFL and System Updates
 | LICENSE  # BSD-2 License
 | README.md  # The README
+| ROADMAP.md # RoadMaps
+| SECURITY.md # Politics Security
+| SUPPORT.md # Politics Support
 ```
 * **WARNING:**
 * **In build.sh, please modify the App Signer for App Signer Installed**
