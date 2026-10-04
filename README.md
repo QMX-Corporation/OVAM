@@ -28,7 +28,7 @@
 ---
 
 ### FOLDER STRUCTURES 
-´´´text
+```text
 OVAM 
   |
   | ManagerPkg # The Manager Package
@@ -40,7 +40,7 @@ OVAM
     | masks.h  # Masks Header
 | LICENSE  # BSD-2 License
 | README.md  # The README
-´´´
+```
 
 ---
 
