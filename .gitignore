@@ -1,0 +1,13 @@
+# QMX Corporation - OVAM Compiler Outputs
+Build/
+*.o
+*.obj
+*.bin
+*.exe
+*.out
+
+# IDE and System Junk
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

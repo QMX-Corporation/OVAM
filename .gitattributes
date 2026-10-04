@@ -1,0 +1,13 @@
+# QMX Corporation - Global Multiplatform Line Endings
+* text=auto
+
+# Force LF (Unix style) for shell scripts so they don't break on Linux/Android
+*.sh text eol=lf
+
+# Force CRLF for Windows batch files
+*.bat text eol=crlf
+
+# Core Source Files
+*.c text
+*.h text
+*.asm text
