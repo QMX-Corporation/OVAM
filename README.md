@@ -17,7 +17,7 @@
 ---
 
 ### LICENSE HEADER
-* **BCD=2: Capsule of Two Patent**
+* **BSD-2: Capsule of Two Patent**
 * **Copyright (C) 2026 QMX Corporation**
 
 ---
