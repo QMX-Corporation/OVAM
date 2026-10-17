@@ -1,0 +1,60 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# OVAM Clang-Format Structural Matrix
+# Copyright (C) 2026 QMX Corporation
+
+BasedOnStyle: LLVM
+
+# Language Standard Enforcement
+Language: Cpp
+Standard: c++20
+
+# Braces and Indentation Layout
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Column Formatting
+ColumnLimit: 100
+
+# Padding and Alignment Rules
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: None
+AlignConsecutiveDeclarations: None
+AlignEscapedNewlines: Right
+AlignOperands: Align
+AlignTrailingComments: true
+
+# Brace Wrapping Style (Kernel Style)
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: false
+  AfterEnum: false
+  AfterFunction: true
+  AfterNamespace: false
+  AfterObjCDeclaration: false
+  AfterStruct: false
+  AfterUnion: false
+  BeforeCatch: false
+  BeforeElse: false
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+# Space Rules around operators
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatementParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Sort Include Headers automatically
+SortIncludes: true

@@ -1,0 +1,48 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# OVAM (Open Vallen Ard Man) Firmware Configuration Matrix
+# Copyright (C) 2026 QMX Corporation
+
+mainmenu "OVAM Firmware Configuration Interface"
+
+menu "Target Hardware Architecture"
+    config ARCH_X86_64
+        bool
+        default y
+        help
+          Target architecture is hardcoded to x86_64 for Intel Tiger Lake platforms.
+
+    config FIRMWARE_SIZE_KB
+        int "ROM Flash Chip Size (KB)"
+        default 512
+        help
+          Defines the maximum size allocation for the compiled boot.bin ROM image.
+endmenu
+
+menu "Security & Cryptographic Subsystems"
+    config AEMOS_POLYMORPHIC_CORE
+        bool "Enable AEMos Polymorphic Execution Layer"
+        default y
+        help
+          Activates the secure, self-encrypting mutation layer inside ManagerPkg.
+
+    config CRYPTO_AES_ENFORCEMENT
+        bool "Enforce Hardened AES Encryption"
+        depends on AEMOS_POLYMORPHIC_CORE
+        default y
+        help
+          Enables the hardware-accelerated AES block cipher verification for the ROM block.
+endmenu
+
+menu "Toolchain Optimization Tweaks"
+    config COMPILER_CLANG_O3
+        bool "Enable Aggressive Optimization (-O3) in Clang"
+        default y
+        help
+          Instructs the Clang compiler to apply extreme binary optimizations for execution speed.
+
+    config NASM_SECURE_SIGNING
+        bool "Enforce Code Signing Verification on Boot"
+        default n
+        help
+          Enables Signtool/OpenSSL validation gates during the final firmware packaging.
+endmenu

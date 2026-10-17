@@ -1,5 +1,5 @@
 ## FIRMWARE OVAM --- THE BEST 
-> A Simple and Beautiful Firmware 
+> A Simple and Beautiful Firmware
 
 # OVAM (Open Vallen Ard Man) - The Beautiful Firmware
 
@@ -10,102 +10,119 @@
 
 ## Navigation
 - [LICENSE HEADER](#license-header)
+- [CONTRIBUTORS](#contributors)
 - [RULES](#rules)
-- [FUTURE IMPLEMENTATIONS](#futures-implementations)
+- [SYSTEM TOOLCHAIN](#system-toolchain)
+- [FUTURE IMPLEMENTATIONS](#future-implementations)
+- [PRE-REQUISITES](#pre-requisites)
+- [SIGNER](#signer)
 - [FOLDER STRUCTURES](#folder-structures)
 
 ---
 
 ### LICENSE HEADER
-* **BSD-2: Capsule of Two Patent**
+* **BSD-2: Clause-Two-Patent**
 * **Copyright (C) 2026 QMX Corporation**
 
 ---
 
+### CONTRIBUTORS 
+All Reviewers and Maintainers of OVAM.
+
+<a href="https://github.com/QMX-Corporation/OVAM/graphs/contributors">
+   <img src="contrib.rocks/image?repo=QMX-Corporation/OVAM" />
+</a>
+
+---
+
 ### RULES 
-* **Problems: If you no resolving a problem, the PR is canceled**
-* **Mantainers-PR: Excect me, please open a PR for me review**
-* **Folders/Paths Structure: With Pkg in end of Name**
-* **Is mandatory in ALL Atuals and Futures Files/Folders the License Header**
-* **Thanks for conttribute with project! Happy Coding!**
+* **Problems:** If you no resolving a problem, the PR is canceled.
+* **Maintainers-PR:** Except me, please open a PR for me review.
+* **Folders/Paths Structure:** With Pkg in end of Name.
+* **License Guard:** Is mandatory in ALL Current and Future Files/Folders the License Header.
+* **Thanks for contribute with project! Happy Coding!**
 
 ---
 
 ## 🛠️ System Toolchain
-
-| Technology | Component | Status |
-| :--- | :--- | :--- |
-| 🖥️ **Assembly** | NASM (Netwide Assembler) | `Integrated` |
-| 🦾 **C / C++** | Clang v19.x Engine | `Active` |
-| 🔗 **Linker** | LLVM `ld.lld` Utilities | `Optimized` |
-| 🛡️ **Security** | AEMos Polymorphic Core | `Locked` |
+* **🖥️ Assembly:** NASM (Netwide Assembler) — `Integrated`
+* **🦾 C / C++:** Clang v19.x Engine — `Active`
+* **🔗 Linker:** LLVM `ld.lld` Utilities — `Optimized`
+* **🛡️ Security:** AEMos Polymorphic Core — `Locked`
 
 ---
 
-## IMPLEMT
-### FUTURE IMPLEMENTATIONS 
-* **ACPI Tables: ALL ACPI Tables existents**
-* **Customized Format: PXE, the Bootloader is mandatory with extension-file .pxe**
-* **Secure Boot: With ManagerPkg**
-* **Memory Map**
-* **Control of NVRAM**
-* **Partition in FAT32: A Pointer in First Sector of Disk speaking the OP (OVAM Par) Local. The OP Local in the Lasts Sectors**
+## FUTURE IMPLEMENTATIONS 
+* **ACPI Tables:** ALL ACPI Tables existents.
+* **Customized Format:** PXE, the Bootloader is mandatory with extension-file .pxe.
+* **Secure Boot:** Supported and verified via ManagerPkg.
+* **Memory Map:** Advanced structural tracking post-ExitBootServices.
+* **Control of NVRAM:** Active hardware storage allocation variables.
+* **Partition in FAT32:** A Pointer in First Sector of Disk speaking the OP (OVAM Par) Local. The OP Local in the Last Sectors.
 
 ---
 
 ## PRE-REQUISITES
-### WHAT I USES FOR COMPILE THE OVAM?
-* **Clang, OPTIONAL: Compiler MSCV (Visual Studio)**
-* **Linker: LLVM**
-* **Operating System: Windows, Unix, Linux, MacOS or Android**
-* **Caller: Make**
-* **WARNING: The Flow is: Make -> build.bat/build.sh -> Compiler -> Linker -> App Signer -> File .bin**
+### WHAT I USE TO COMPILE OVAM?
+* **Compiler Framework:** Clang. *OPTIONAL:* Compiler MSVC (Visual Studio).
+* **Linker Backend:** LLVM Infrastructure.
+* **Host Operating System:** Windows, Unix, Linux, MacOS or Android.
+* **Execution Automation:** Make.
+* **The Compilation Pipeline:** Make -> build.bat/build.sh -> Compiler -> Linker -> App Signer -> File .bin
 
 ---
 
-## SIGNATURE
-### SIGNER 
-* **In Windows: Signtool (signtool.exe) in Windows SDKs**
-* **In Unix, Linux, Android or MacOS: The App Signer Supported. e.g: OpenSSL/OpenSSH**
-* **RFC 3161 Modern**
+## SIGNER 
+* **In Windows Architecture:** Signtool (signtool.exe) in Windows SDKs.
+* **In Unix, Linux, Android or MacOS Platforms:** The App Signer Supported (e.g., OpenSSL/OpenSSH).
+* **Compliance Standards:** RFC 3161 Modern Time Stamping.
 
 ---
 
 ### FOLDER STRUCTURES 
 ```text
-OVAM 
-  | .github  # The MainPath of GitHub
-       | ISSUE_TEMPLATE 
-             | bug_report.md  # Update the Issues of Bugs
-             | feature_request.md  # A Request of Features
-        | pull_request_template.md  # The "God" of PRs
-  | Compile  # The Build Folder
-       | Unix, Linux, Android and MacOS  # The OS
-             | build.sh  # Script for Compile the Project
-       | Windows # The OS
-           | build.bat  # Script for Compile the Project
-  | ManagerPkg # The Manager Package
-       | AEMos  # Crypto System
-           | aemos.c # Crypto System
-           | aes.h  # Crypto AES Header
-    | manager.c  # The Manager
-    | masks.c  # Masks Logic
-    | masks.h  # Masks Header
-| .gitattributes  # Essential Git File (EGF)
-| .gitignore  # Essential Git File (EGF)
-| CHANGELOG.md  # The Logs of Changes
-| CONTRIBUTING.md  # With I collaborating with OVAM Project?
-| CONTRIBUTORS.md  # The Contributors
-| GOVERNANCE.md  # BDFL and System Updates
-| LICENSE  # BSD-2 License
-| README.md  # The README
-| ROADMAP.md # RoadMaps
-| SECURITY.md # Politics Security
-| SUPPORT.md # Politics Support
+OVAM/
+├── .devcontainer/
+│   ├── devcontainer.json
+│   └── Dockerfile
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   └── pull_request_template.md
+├── CompilePkg/
+│   ├── Unix_Linux_Android_MacOS/
+│   │   └── build.sh
+│   └── Windows/
+│       └── build.bat
+├── MainPkg/
+│   └── boot.asm
+├── ManagerPkg/
+│   ├── AEMos/
+│   │   ├── aemos.c
+│   │   └── aes.h
+│   ├── manager.c
+│   ├── masks.c
+│   └── masks.h
+├── .clang-format
+├── .editorconfig
+├── .gitattributes
+├── .gitignore
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── CONTRIBUTORS.md
+├── GOVERNANCE.md
+├── Kconfig
+├── LICENSE
+├── README.md
+├── ROADMAP.md
+├── SECURITY.md
+└── SUPPORT.md
 ```
-* **WARNING:**
-* **In build.sh, please modify the App Signer for App Signer Installed**
-* **But, not commit your alteration in build.sh**
+* **⚠️ WARNING:**
+* In `build.sh`, please modify the App Signer for the local App Signer Installed.
+* Do not commit your environmental alterations in `build.sh`.
 
 ---
 
