@@ -30,7 +30,7 @@
 All Reviewers and Maintainers of OVAM.
 
 <a href="https://github.com/QMX-Corporation/OVAM/graphs/contributors">
-   <img src="contrib.rocks/image?repo=QMX-Corporation/OVAM" />
+   <img src="https://contrib.rocks/image?repo=QMX-Corporation/OVAM" />
 </a>
 
 ---
@@ -91,7 +91,7 @@ OVAM/
 │   │   └── feature_request.md
 │   └── pull_request_template.md
 ├── CompilePkg/
-│   ├── Unix_Linux_Android_MacOS/
+│   ├── Unix, Linux, Android and MacOS/
 │   │   └── build.sh
 │   └── Windows/
 │       └── build.bat
